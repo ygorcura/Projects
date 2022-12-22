@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+:root{
+    --head:'Big Shoulders Display', cursive;
+    --paragraph:'Lexend Deca', sans-serif;
+    
+    /* color boxes*/
+    --Brightorange:hsl(31, 77%, 52%);
+    --Darkcyan:hsl(184, 100%, 22%);
+    --Verydarkcyan:hsl(179, 100%, 13%);
+    
+    /* paragraphs */
+    --Transparentwhite:hsla(0, 0%, 100%, 0.75);
+    
+    /*background, headings, buttons)*/
+    --Verylightgray:hsl(0, 0%, 95%);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 920px;
+    height: 528px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    margin-top: 248px;
+}
+
+h1 {
+    font-family:var(--head);
+    font-weight: 800;
+    font-size: 48px;
+    color: hsla(0, 0%, 100%, 1);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+p {
+    font-family: var(--paragraph);
+    font-size: 14px;
+    font-weight:400;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5em;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+img {
+    margin: 50px 0px 0px 50px;
+}
+
+button {
+    margin: 74px 114px 55px 52px;
+    border-radius: 50px;
+    font-family: var(--paragraph);
+    width: 140px;
+    height: 51px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--Transparentwhite);
+    border-color: white;
+    border-style: solid;
+    border: 2px solid white;
+}
+
+.sedans {
+    background-color: var(--Brightorange);
+    border-radius: 10px 0px 0px 10px;
+}
+.suvs {
+    background-color: var(--Darkcyan);
+}
+
+.luxury {
+    background-color: var(--Verydarkcyan);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.sedansbtn {
+    color: var(--Brightorange);
+    border: none;
+}
+
+.sedansbtn:hover {
+    background-color: var(--Brightorange);
+    color: var(--Transparentwhite);
+}
+
+.suvsbtn {
+    color: var(--Darkcyan);
+    border: none;
+}
+
+.suvsbtn:hover {
+    background-color: var(--Darkcyan);
+    
+}
+
+.luxurybtn {
+    color: var(--Verydarkcyan);
+    border: none;
+}
+
+.luxurybtn:hover {
+    background-color: var(--Verydarkcyan);
+}
+
+@media (max-width: 500px){
+.container {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin-bottom: 25vh;
+    margin-top: 25vh;
+    height: auto;
+}
+.sedans {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.luxury {
+    background-color: var(--Verydarkcyan);
+    border-radius: 0px 0px 10px 10px;
+}
+}
